@@ -22,13 +22,13 @@ $('a[href^="#"]').on('click', function(e) {
     'scrollTop': $target.offset().top - offset
   }, 200, 'swing');
 });
+
+
 /** PRELOADER */
-
-
 $(window).on('load', function () {
-  // setTimeout(function () {
+  setTimeout(function () {
     $('.preloader').fadeOut('slow');
-  // }, 700);
+  }, 200);
 });
 
 $(document).ready(function() {  
@@ -111,34 +111,36 @@ $(window).scroll(function() {
           if (!form.checkValidity()) {
             event.preventDefault();
             event.stopPropagation();
-          }else {
-            var formData = {
-              name: $("#name").val(),
-              email: $("#email").val(),
-              subject: $("#subject").val(),
-              message: $("#message").val(),
-                  };
-                  $.ajax({
-                    type: "post",
-                    url: "https://adealtube.com/contact-portfolio",
-                    data: formData,
-                    dataType: "json",
-                    encode: true,
-                  }).done(function (data)
-                  {
-                    if (data.error) {
-                      alert('Something went wrong. Please try again');
-                    }else if(data.success){
-                      $('#form').trigger('reset');
-                      $('#form').removeClass('was-validated');
-                      message.setHTMLCode("<p></p>");
-                      alert('Message sent successfully');
-                    }
-                  })
-
           }
+          // else {
+          //   var formData = {
+          //     name: $("#name").val(),
+          //     email: $("#email").val(),
+          //     subject: $("#subject").val(),
+          //     message: $("#message").val(),
+          //         };
+          //         $.ajax({
+          //           type: "post",
+          //           url: "https://adealtube.com/contact-portfolio",
+          //           data: formData,
+          //           dataType: "json",
+          //           encode: true,
+          //         }).done(function (data)
+          //         {
+          //           if (data.error) {
+          //             alert('Something went wrong. Please try again');
+          //           }else if(data.success){
+          //             $('#form').trigger('reset');
+          //             $('#form').removeClass('was-validated');
+          //             message.setHTMLCode("<p></p>");
+          //             alert('Message sent successfully');
+          //           }
+          //         })
+
+          // }
           form.classList.add('was-validated');
-          event.preventDefault();
+          $('#form').trigger('reset');
+          // event.preventDefault();
         }, false)
       })
   })();
