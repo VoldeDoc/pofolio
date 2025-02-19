@@ -1,17 +1,15 @@
+/** AOS */
+window.addEventListener('load', () => {
+  AOS.init({
+    duration: 1000,
+    easing: 'ease-in-out',
+    once: false,
+    mirror: true
+  })
+});
 
-
-  /** AOS */
-  window.addEventListener('load', () => {
-    AOS.init({
-      duration: 1000,
-      easing: 'ease-in-out',
-      once: false,
-      mirror: true
-    })
-  });
-
-  /** NAVBAR */
-$('a[href^="#"]').on('click', function(e) {
+/** NAVBAR */
+$('a[href^="#"]').on('click', function (e) {
   e.preventDefault();
 
   var target = this.hash;
@@ -23,11 +21,11 @@ $('a[href^="#"]').on('click', function(e) {
   }, 200, 'swing');
 });
 
-  /** NAVBAR TOGGLE */
-  // check if the anchor is clicked and the navbar is open then close the navbar
-  $('.navbar-nav>li>a').on('click', function() {
-    $('.navbar-collapse').collapse('hide');
-  });
+/** NAVBAR TOGGLE */
+// check if the anchor is clicked and the navbar is open then close the navbar
+$('.navbar-nav>li>a').on('click', function () {
+  $('.navbar-collapse').collapse('hide');
+});
 
 
 /** PRELOADER */
@@ -37,12 +35,12 @@ $(window).on('load', function () {
   }, 200);
 });
 
-$(document).ready(function() {  
+$(document).ready(function () {
 
   /** BACK-TO-TOP FUNCTION */
-let backtotop = $('.back-to-top');
-  $(window).scroll(function() {
-  if (backtotop) {
+  let backtotop = $('.back-to-top');
+  $(window).scroll(function () {
+    if (backtotop) {
       if (window.scrollY > 100) {
         backtotop.addClass('active');
       } else {
@@ -51,28 +49,50 @@ let backtotop = $('.back-to-top');
     }
   });
 
+  backtotop.on('click', function (e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: 0 }, '300');
+  });
+
   /** ONCLICK NAV ACTIVE */
-  $('.nav-link').click(function(e) {
+  $('.nav-link').click(function (e) {
     $('.nav-link').removeClass('active');
     $(this).addClass('active');
   });
 
-  /**NAV ON SCROLL */
-  window.addEventListener('scroll', function() {
-    var element = document.getElementById('nav');
-    var scrollPosition = window.scrollY;
-    if (scrollPosition > 0) {
-      element.classList.remove('nav');
-    } else {
-      element.classList.add('nav');
-    }
+  /** NAV-LINK ACTIVE ON SCROLL */
+  $(window).on('scroll', function () {
+    var scrollPos = $(document).scrollTop();
+    $('.nav-link').each(function () {
+      var currLink = $(this);
+      var refElement = $(currLink.attr("href"));
+      if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+        $('.nav-link').removeClass("active");
+        currLink.addClass("active");
+      } else if (window.scrollY === 0) {
+        $('a[href="#home"]').addClass('active');
+      } else {
+        currLink.removeClass("active");
+      }
+    });
   });
 
+  /**NAV ON SCROLL */
+  // window.addEventListener('scroll', function() {
+  //   var element = document.getElementById('nav');
+  //   var scrollPosition = window.scrollY;
+  //   if (scrollPosition > 0) {
+  //     element.classList.remove('nav');
+  //   } else {
+  //     element.classList.add('nav');
+  //   }
+  // });
 
 
 
 
-    /** TYPED */
+
+  /** TYPED */
   const typed = $('.typed');
   if (typed) {
     let typed_strings = typed.attr('data-typed-items');
@@ -88,25 +108,25 @@ let backtotop = $('.back-to-top');
 
   /* animation on scroll fade-up */
 
-$(window).scroll(function() {
+  $(window).scroll(function () {
     var windowHeight = $(window).height();
     var scrollHeight = $(window).scrollTop();
     var fadeElement = $('.fade-up');
-    fadeElement.each(function() {
+    fadeElement.each(function () {
       var positionTop = $(this).offset().top;
       if (positionTop < scrollHeight + windowHeight - 50) {
-        $(this).addClass('fade-up-show' );
-      }else if(positionTop > scrollHeight + windowHeight - 50){
+        $(this).addClass('fade-up-show');
+      } else if (positionTop > scrollHeight + windowHeight - 50) {
         $(this).removeClass('fade-up-show');
-        
+
       }
     });
 
   });
 
-    /*form validation & ajax contact form */
+  /*form validation & ajax contact form */
 
-  (() =>  {
+  (() => {
     'use strict';
 
     var forms = document.querySelectorAll('.needs-validation');
@@ -150,7 +170,7 @@ $(window).scroll(function() {
         }, false)
       })
   })();
-  
+
   const projects = GLightbox({
     selector: '.project-lightbox',
     width: '90%',
