@@ -134,17 +134,42 @@ $(document).ready(function () {
     Array.prototype.slice.call(forms)
       .forEach(function (form) {
         form.addEventListener('submit', function (event) {
+          event.preventDefault();
           if (!form.checkValidity()) {
             event.preventDefault();
             event.stopPropagation();
           }
           // else {
-          //   var formData = {
-          //     name: $("#name").val(),
-          //     email: $("#email").val(),
-          //     subject: $("#subject").val(),
-          //     message: $("#message").val(),
-          //         };
+          var formData = {
+            name: $("#name").val(),
+            email: $("#email").val(),
+            subject: $("#subject").val(),
+            message: $("#message").val(),
+          };
+          
+          fetch("https://formspree.io/f/xkndjarv", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+          })
+            .then(async (response) => {
+              console.log(response);
+              
+              if (response.ok) {
+                const data = await response.json();
+                window.location.href = "https://formspree.io" + data.next;
+                form.reset();
+              } else {
+                alert("Something went wrong. Please try again");
+              }
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+              alert("Something went wrong. Please try again");
+            });
+
           //         $.ajax({
           //           type: "post",
           //           url: "https://adealtube.com/contact-portfolio",
@@ -164,9 +189,9 @@ $(document).ready(function () {
           //         })
 
           // }
-          form.classList.add('was-validated');
-          $('#form').trigger('reset');
-          // event.preventDefault();
+          // form.classList.add('was-validated');
+
+          // $('#form').trigger('reset');
         }, false)
       })
   })();
