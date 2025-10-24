@@ -784,3 +784,12 @@ form label {
   background-size: cover;
   background-position: center;
 }
+
+#python {
+  background: linear-gradient(to right, #306998, #FFD43B, #4B8BBE); 
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: cover;
+  background-position: center;
+}
