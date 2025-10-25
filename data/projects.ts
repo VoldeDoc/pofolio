@@ -210,5 +210,5 @@ export const projectCategories = [
   { id: "frontend", label: "Frontend" },
   { id: "backend", label: "Backend" },
   { id: "game", label: "Game" },
-  { id: "other", label: "Other" },
+  // { id: "other", label: "Other" },
 ] as const;

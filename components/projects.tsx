@@ -88,10 +88,10 @@ export function Projects() {
                           className="w-full h-full"
                         >
                           <Image
-                            src={project.image || "/placeholder.svg"}
+                            src={project.image}
                             alt={project.title}
                             fill
-                            className="object-cover group-hover:blur-0 blur-[2px] transition-all duration-500"
+                            className="group-hover:blur-none blur-[2px] transition-all duration-500"
                           />
                         </motion.div>
                         <div className="absolute inset-0 bg-linear-to-t from-card via-transparent to-transparent opacity-60" />

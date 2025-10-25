@@ -47,7 +47,7 @@ export function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-background/80 backdrop-blur-lg shadow-lg border-b border-border/50" : "bg-transparent"
+        scrolled ? "bg-background/80 backdrop-blur-lg shadow-lg border-b border-border/50" : `${isOpen ? "bg-background/50 backdrop-blur-lg" : "bg-transparent"}`
       }`}
     >
       <nav className="container mx-auto px-4 py-4">
@@ -67,7 +67,7 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-2">
+          <div className="hidden lg:flex items-center gap-2">
             {navItems.map((item) => {
               const Icon = item.icon
               const isActive = activeSection === item.href.substring(1)
@@ -98,7 +98,7 @@ export function Navbar() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex items-center gap-2 md:hidden">
+          <div className="flex items-center gap-2 lg:hidden">
             <ThemeToggle />
             <Button
               variant="ghost"
@@ -118,7 +118,7 @@ export function Navbar() {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="md:hidden mt-4 overflow-hidden"
+              className="lg:hidden mt-4 overflow-hidden"
             >
               <div className="flex flex-col gap-2 pb-4">
                 {navItems.map((item, index) => {

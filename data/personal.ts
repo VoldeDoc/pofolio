@@ -8,7 +8,7 @@ export const personalInfo = {
     "As a proficient Full-Stack Developer, I possess in-depth knowledge of how web applications work and have expertise in creating seamless user interfaces.",
   email: "adebayowalid@gmail.com",
   location: "Sheffield, United Kingdom",
-  cvUrl: "https://1drv.ms/b/s!AgAWByIEcbENrN0dsllUQFlCiq9Nsw?e=8fioyH",
+  cvUrl: "https://1drv.ms/b/c/0db1710422071600/EQAWByIEcbEggA2dLgsAAAABtHdbd-Tm2NcCui9AQJojDQ?e=KgJPJB",
   profileImage: "/images/walid.webp",
   about: `I am a results-driven full-stack developer with over three years of experience in front-end and back-end development, specialising in building user-friendly and interactive web applications. Skilled in JavaScript, React, Next.js, Node.js, Express.js, MongoDB, and MySQL.
 

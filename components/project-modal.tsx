@@ -34,7 +34,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
         >
           {/* Header Image */}
           <div className="relative h-64 md:h-96 w-full">
-            <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
+            <Image src={project.image} alt={project.title} fill />
             <Button onClick={onClose} size="icon" variant="secondary" className="absolute top-4 right-4 rounded-full">
               <X className="h-5 w-5" />
             </Button>
