@@ -11,7 +11,7 @@ import { Label } from "./ui/label"
 import Link from "next/link"
 
 export function Contact() {
-  const [state, handleSubmit] = useFormspree("xkndjarv")
+  const [state, handleSubmit] = useFormspree(process.env.NEXT_PUBLIC_FORMSPREE_ID || "")
 
   return (
     <section id="contact" className="py-32 relative overflow-hidden">

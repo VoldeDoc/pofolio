@@ -19,7 +19,7 @@ export const services: Service[] = [
     icon: BiCodeAlt,
     features: [
       "Responsive design",
-      "Performance optimization",
+      "Performance optimisation",
       "SEO-friendly architecture",
       "Database integration",
       "API development",
@@ -45,20 +45,20 @@ export const services: Service[] = [
     icon: IoTerminalOutline,
     features: [
       "RESTful API design",
-      "Database design & optimization",
+      "Database design & optimisation",
       "Authentication & security",
       "Microservices architecture",
       "Cloud deployment",
     ],
   },
   {
-    title: "Database Design & Optimization",
+    title: "Database Design & Optimisation",
     description:
       "Design and optimize databases for performance, scalability, and reliability.",
     icon: LuDatabase,
     features: [
       "Schema design",
-      "Query optimization",
+      "Query optimisation",
       "Data modeling",
       "Migration planning",
       "Backup & recovery",
@@ -98,7 +98,7 @@ export const services: Service[] = [
     features: [
       "Keyword research & analysis",
       "Google Analytics & Search Console setup",
-      "On-page SEO optimization",
+      "On-page SEO optimisation",
       "Technical SEO audits",
       "Content strategy & creation",
       "Backlink building",

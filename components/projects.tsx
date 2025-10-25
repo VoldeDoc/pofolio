@@ -47,7 +47,7 @@ export function Projects() {
                 Featured Projects
               </h2>
               <p className="text-muted-foreground mt-6 max-w-2xl mx-auto text-lg leading-relaxed">
-                A showcase of innovative projects I've passionately crafted, utilizing cutting-edge technologies and
+                A showcase of innovative projects I've passionately crafted, utilising cutting-edge technologies and
                 best practices.
               </p>
             </div>
