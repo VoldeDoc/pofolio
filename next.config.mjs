@@ -4,10 +4,9 @@ const nextConfig = {
     remotePatterns: [
       { protocol: "https", hostname: "i.ibb.co" },
     ],
+    unoptimized: true,
   },
   output: 'standalone',
-  // Suppress hydration warnings caused by browser extensions
-  reactStrictMode: true,
 }
 
 export default nextConfig
