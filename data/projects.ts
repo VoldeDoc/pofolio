@@ -55,8 +55,8 @@ export const projects: Project[] = [
     description:
       "RoboRush is a futuristic browser-based arcade game where players control a robot to collect energy orbs, avoid rotating hazards, and race against time in a dynamic maze environment.",
     image: "https://i.ibb.co/4ZsfSf25/roborush.png",
-    link: "https://nexus-digital-henna.vercel.app/",
-    github: "https://github.com/roborush",
+    link: "https://roborush-ashen.vercel.app/",
+    github: "https://github.com/walidadebayo/roborush",
     tech: [
       "React",
       "Next.js",
@@ -75,7 +75,7 @@ export const projects: Project[] = [
       "Nexus Digital is a fully responsive, animated intranet homepage designed to improve internal communication, team collaboration, and productivity within an organisation.",
     image: "https://i.ibb.co/M5CpGkTY/nexus-digital.png",
     link: "https://nexus-digital-henna.vercel.app/",
-    github: "https://github.com/nexusedigital",
+    github: "https://github.com/walidadebayo/nexus-digital",
     tech: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
   },
   {
@@ -85,7 +85,6 @@ export const projects: Project[] = [
       "A full-stack web application for a local bike repair and e-bike conversion business, 'Dr. Bike'. The website provides a complete digital solution to showcase services, products, customer reviews, blog, galleries and manage appointments.",
     image: "https://i.ibb.co/Xk8k41Cn/drbike.png",
     link: "https://drbike.vercel.app/",
-    github: "https://github.com/drbike",
     tech: ["React", "Next.js", "TypeScript", "MongoDB", "Tailwind CSS"],
   },
   {
@@ -95,7 +94,7 @@ export const projects: Project[] = [
       "A responsive and AI-enhanced web application that simplifies estate management for users and admins.",
     image: "https://i.ibb.co/HL7WLvN8/estateluxe.png",
     link: "https://estateluxe.vercel.app/",
-    github: "https://github.com/estateluxe",
+    github: "https://github.com/walidadebayo/estateluxe",
     tech: ["React", "Next.js", "TypeScript", "Tailwind CSS", "KendoReact"],
   },
   {
@@ -105,7 +104,7 @@ export const projects: Project[] = [
       "A web platform designed to help school leavers explore careers in technology by providing curated resources, career guidance, and interactive features.",
     image: "https://i.ibb.co/YBNvY8Tt/nextgencareerstech.png",
     link: "https://nextgencareerstech.netlify.app/",
-    github: "https://github.com/nextgencareerstech",
+    github: "https://github.com/walidadebayo/nextgencareerstech",
     tech: ["HTML", "CSS"],
   },
   {
@@ -115,7 +114,7 @@ export const projects: Project[] = [
       "React Video Audio Player is a lightweight, customizable React video player and React audio player that supports video, audio, and streaming playback.",
     image: "https://i.ibb.co/Z6s7pLNQ/react-video-audio-player.png",
     link: "https://react-video-audio-player.vercel.app",
-    github: "https://github.com/reactvideoaudioplayer",
+    github: "https://github.com/walidadebayo/react-video-audio-player",
     tech: ["React.js", "HTML", "CSS", "Tailwind CSS", "JavaScript"],
   },
   {
@@ -125,7 +124,7 @@ export const projects: Project[] = [
       "MappifySQL is a lightweight, easy-to-use Object-Relational Mapping (ORM) library for MySQL databases, designed for use with Node.js.",
     image: "https://i.ibb.co/HDdDzKRB/mappifysql.png",
     link: "https://www.npmjs.com/package/mappifysql",
-    github: "https://github.com/mappifysql",
+    github: "https://github.com/walidadebayo/mappifysql",
     tech: ["Node.js", "JavaScript", "TypeScript", "MySQL"],
   },
   {
