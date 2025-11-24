@@ -4,13 +4,13 @@ import { skills } from "@/data/skills";
 import { education } from "@/data/education";
 import { personalInfo, socialLinks } from "@/data/personal";
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://walidadebayo.com";
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "";
 
 const sameAs = socialLinks.map(link => link.url);
 
 const personData = {
   name: personalInfo.name,
-  alternateName: "Walid.dev",
+  alternateName: "Volde.dev",
   description: personalInfo.intro,
   image: `${baseUrl}${personalInfo.profileImage}`,
   sameAs: sameAs,
@@ -19,9 +19,9 @@ const personData = {
   url: baseUrl,
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Sheffield",
-    addressRegion: "England",
-    addressCountry: "United Kingdom",
+    addressLocality: "Maitaima",
+    addressRegion: "Nigeria",
+    addressCountry: "Abuja",
   },
   alumniOf: education.map(edu => ({
     "@type": "EducationalOrganisation",
@@ -35,8 +35,8 @@ const personData = {
 };
 
 const organisationData = {
-  name: "Walid Adebayo - Full-Stack Developer",
-  alternateName: "Walid.dev",
+  name: "Edun Yusuf - Full-Stack Developer",
+  alternateName: "Volde.dev",
   description:
     "Professional full-stack web development services specialising in React, Next.js, Node.js, TypeScript, and cloud technologies. Building modern, scalable web applications.",
   logo: `${baseUrl}/images/logo.webp`,
@@ -48,9 +48,9 @@ const organisationData = {
   },
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Sheffield",
-    addressRegion: "England",
-    addressCountry: "United Kingdom",
+    addressLocality: "Maitaima",
+    addressRegion: "Nigeria",
+    addressCountry: "Abuja",
   },
   contactPoint: {
     "@type": "ContactPoint",
@@ -95,9 +95,9 @@ const skillsData = skills.map((skill) => ({
 
 // Define website data
 const websiteData = {
-  name: "Walid Adebayo - Full-Stack Developer Portfolio",
+  name: "Edun Yusuf - Full-Stack Developer Portfolio",
   description:
-    "Professional portfolio of Walid Adebayo, a full-stack developer with expertise in React, Next.js, Node.js, TypeScript, and cloud technologies. Building modern, scalable web applications.",
+    "Professional portfolio of Edun Yusuf, a full-stack developer with expertise in React, Next.js, Node.js, TypeScript, and cloud technologies. Building modern, scalable web applications.",
   url: baseUrl,
   author: {
     "@type": "Person",

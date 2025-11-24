@@ -85,7 +85,6 @@ export const skills: Skill[] = [
   { name: "JavaScript", icon: SiJavascript, category: "languages" },
   { name: "TypeScript", icon: SiTypescript, category: "languages" },
   { name: "Python", icon: SiPython, category: "languages" },
-  { name: "C++", icon: SiCplusplus, category: "languages" },
 ]
 
 export const skillCategories = [

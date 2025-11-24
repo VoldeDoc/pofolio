@@ -62,7 +62,7 @@ export function Navbar() {
               />
             </div>
             <span className="text-2xl font-bold bg-linear-to-r from-primary to-accent bg-clip-text text-transparent">
-              Walid.dev
+              Volde.dev
             </span>
           </Link>
 
