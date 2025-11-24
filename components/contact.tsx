@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Mail, Send, Loader2, CheckCircle2 } from "lucide-react"
-import { useForm as useFormspree, ValidationError } from "@formspree/react"
+// import { useForm as useFormspree, ValidationError } from "@formspree/react"
 import { personalInfo, socialLinks } from "@/data/personal"
 import { Button } from "./ui/button"
 import { Input } from "./ui/input"
@@ -11,7 +11,14 @@ import { Label } from "./ui/label"
 import Link from "next/link"
 
 export function Contact() {
-  const [state, handleSubmit] = useFormspree(process.env.NEXT_PUBLIC_FORMSPREE_ID || "")
+  // const [state, handleSubmit] = useFormspree(process.env.NEXT_PUBLIC_FORMSPREE_ID || "")
+
+  // Temporary state for form (comment out when using Formspree)
+  const state = { succeeded: false, submitting: false, errors: [] }
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    console.log("Form submission disabled - Formspree not configured")
+  }
 
   return (
     <section id="contact" className="py-32 relative overflow-hidden">
@@ -102,7 +109,7 @@ export function Contact() {
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
             >
-              {state.succeeded ? (
+              {/* {state.succeeded ? (
                 <div className="bg-card/50 backdrop-blur-sm p-8 rounded-2xl border border-border shadow-xl text-center space-y-6">
                   <motion.div
                     initial={{ scale: 0 }}
@@ -126,7 +133,7 @@ export function Contact() {
                     Send Another Message
                   </Button>
                 </div>
-              ) : (
+              ) : ( */}
                 <form
                   onSubmit={handleSubmit}
                   className="space-y-6 bg-card/50 backdrop-blur-sm p-8 rounded-2xl border border-border shadow-xl"
@@ -143,7 +150,7 @@ export function Contact() {
                         required
                         className="bg-background/50 border-border focus:border-primary transition-colors"
                       />
-                      <ValidationError prefix="Name" field="name" errors={state.errors} />
+                      {/* <ValidationError prefix="Name" field="name" errors={state.errors} /> */}
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="email" className="text-sm font-semibold">
@@ -157,7 +164,7 @@ export function Contact() {
                         required
                         className="bg-background/50 border-border focus:border-primary transition-colors"
                       />
-                      <ValidationError prefix="Email" field="email" errors={state.errors} />
+                      {/* <ValidationError prefix="Email" field="email" errors={state.errors} /> */}
                     </div>
                   </div>
 
@@ -172,7 +179,7 @@ export function Contact() {
                       required
                       className="bg-background/50 border-border focus:border-primary transition-colors"
                     />
-                    <ValidationError prefix="Subject" field="subject" errors={state.errors} />
+                    {/* <ValidationError prefix="Subject" field="subject" errors={state.errors} /> */}
                   </div>
 
                   <div className="space-y-2">
@@ -187,7 +194,7 @@ export function Contact() {
                       required
                       className="bg-background/50 border-border focus:border-primary transition-colors resize-none"
                     />
-                    <ValidationError prefix="Message" field="message" errors={state.errors} />
+                    {/* <ValidationError prefix="Message" field="message" errors={state.errors} /> */}
                   </div>
 
                   <Button
@@ -210,7 +217,7 @@ export function Contact() {
                     )}
                   </Button>
                 </form>
-              )}
+              {/* )} */}
             </motion.div>
           </div>
         </motion.div>
