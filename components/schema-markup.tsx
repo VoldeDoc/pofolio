@@ -4,7 +4,7 @@ import { skills } from "@/data/skills";
 import { education } from "@/data/education";
 import { personalInfo, socialLinks } from "@/data/personal";
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "";
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://walidadebayo.com";
 
 const sameAs = socialLinks.map(link => link.url);
 
